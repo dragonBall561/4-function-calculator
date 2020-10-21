@@ -18,14 +18,14 @@ echo This is a Four-Function Calculator
 echo Insert Your Number, Followed by a '/', '*', '+', or '-', then another number
 echo For example, '3 - 4' or '3 * 4'
 echo Please use spaces in between the number\(s\) and the symbols
+echo DISCLAIMER! Division will round DOWN to a WHOLE NUMBER!
+echo DISCLAIMER II! NO DECIMALS ALLOWED
 read -p 'Please Write Your Equation Here: ' to_calc
-echo $to_calc
 split_ex $to_calc
 
 if [ $ex2 = 'Calc.sh' ]; then
 	expr $1 \* $3
 else
-	echo 2
 	expr $ex1 $ex2 $ex3
 	exit 0
 fi
